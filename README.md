@@ -1,6 +1,6 @@
 # Andres Mena — personal website
 
-Personal website source for andymena.com, maintained in `andres-mena/andymena.com`. Hosting, domain configuration, and course materials are pending.
+Personal website source for andymena.com, maintained in `andres-mena/andymena.com`. The GitHub Pages workflow is prepared; Pages activation, custom domain configuration, HTTPS, and course materials are pending.
 
 ## Preview
 
@@ -25,6 +25,8 @@ Only `site/` is intended for deployment. The purchase confirmation email, source
 
 The primary blue is `#233393`, with `#3043b4` as a secondary blue; both appear in LAPDE's homepage styles. The supplied landscape is combined with a decorative illustration of an observed and counterfactual trajectory. The illustration represents no empirical result.
 
-## Publication later
+## Publication
 
-When repository access is ready, add a GitHub Pages deployment workflow that uploads **only `site/`**. Configure the custom domain and domain verification before changing DNS. Do not publish the workspace root.
+In repository Settings → Pages, select **GitHub Actions** as the publishing source. The workflow in `.github/workflows/pages.yml` uploads **only `site/`** on each push to `main`, and can also be run manually from the Actions tab.
+
+Set the custom domain to `andymena.com` in Pages settings, complete domain verification and DNS configuration, and enable **Enforce HTTPS** after the certificate becomes available. Do not publish the workspace root.
