@@ -17,13 +17,11 @@ Only `site/` is intended for deployment. The purchase confirmation email, source
 - `site/assets/portrait.jpg`: optimized portrait.
 - `site/assets/data-landscape.jpg`: supplied landscape photograph.
 - `site/assets/podcast-clip.mp4`: interview excerpt, with local poster and optional automatic English captions.
-- `site/LICENSE`: license retained from the reference template.
+- `site/LICENSE`: MIT license and copyright notice.
 - `CONTENT_NOTES.md`: local editorial notes, excluded from Git.
 - `DNS_SETUP.md`: Name.com access and domain setup instructions.
 
-## Design reference
-
-The source reference is `juancyamin/juancyamin.github.io`, inspected on 2026-10-30. Its academic navigation, serif headings, restrained backgrounds, two-column sections, and teaching hierarchy inform this static adaptation. The Jekyll theme/build system and Juan's personal content are not included. The original MIT license is retained.
+## Design
 
 The primary blue is `#233393`, with `#3043b4` as a secondary blue; both appear in LAPDE's homepage styles. The supplied landscape is combined with a decorative illustration of an observed and counterfactual trajectory. The illustration represents no empirical result.
 

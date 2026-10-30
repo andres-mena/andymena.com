@@ -1,5 +1,4 @@
-/* Academic layout adapted from Juan C. Yamin's MIT-licensed site.
-   Original theme copyright (c) 2016 Michael Rose; see ../LICENSE. */
+/* MIT license and copyright notice: see ../LICENSE. */
 :root{--blue:#233393;--blue-light:#3043b4;--ink:#202833;--copy:#444e59;--muted:#5d6975;--paper:#f8f9fa;--tint:#eef1f6;--border:#d6dce2;--width:1080px}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
