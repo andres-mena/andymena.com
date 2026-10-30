@@ -54,6 +54,7 @@ p{margin:0 0 18px}
 .thesis-link .eyebrow{font-size:.66rem}
 .tinted{background:var(--tint)}
 .course{margin:0 0 24px}
+.course-materials{display:inline-block;margin-top:7px;font-size:.85rem}
 .lead{font-family:Georgia,serif;font-size:1.35rem;color:var(--ink)}
 .text-link{display:inline-block;margin-top:12px;border-bottom:1px solid var(--blue);font-size:.95rem}
 .media-list>a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0;border-bottom:1px solid var(--border)}
