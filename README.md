@@ -1,10 +1,10 @@
 # Andres Mena — personal website
 
-Personal website source for andymena.com, maintained in `andres-mena/andymena.com`. The GitHub Pages workflow is prepared; Pages activation, custom domain configuration, HTTPS, and course materials are pending.
+Personal website published at andymena.com, maintained in `andres-mena/andymena.com`. Course materials can be added as they become available.
 
 ## Preview
 
-Open `site/index.html` in a browser. The website has no build step, external fonts, tracking, or required JavaScript.
+Open `site/index.html` in a browser. The website has no build step, external fonts, tracking, or required JavaScript. Optional animations use a locally hosted copy of Motion 14.9.0.
 
 Only `site/` is intended for deployment. The purchase confirmation email, source photos, and LinkedIn source file are not website content.
 
@@ -14,6 +14,8 @@ Only `site/` is intended for deployment. The purchase confirmation email, source
 - `site/cv.html`: redirect for the previous CV page address.
 - `site/assets/Andres_Mena_CV.pdf`: original PDF supplied by the owner (`CV_Mena_2027.pdf`); opened directly by the CV navigation link.
 - `site/assets/style.css`: layout and palette.
+- `site/assets/animations.js`: intro, scroll, stagger, and illustration hover animations; respects reduced motion and print preferences.
+- `site/assets/vendor/motion-14.9.0.js`: pinned Motion browser library, with its MIT license alongside it.
 - `site/assets/portrait.jpg`: optimized portrait.
 - `site/assets/data-landscape.jpg`: supplied landscape photograph.
 - `site/assets/podcast-clip.mp4`: interview excerpt, with local poster and optional automatic English captions.
