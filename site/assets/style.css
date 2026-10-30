@@ -33,7 +33,7 @@ p{margin:0 0 18px}
 .location-dot{width:6px;height:6px;border-radius:50%;background:var(--blue)}
 .profile-links{display:flex;flex-wrap:wrap;gap:12px 23px;margin-top:30px;font-size:.85rem;font-weight:550}
 .landscape-band{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;background:#193778 url("data-landscape.jpg") center 58%/cover}
-.landscape-overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(12,28,71,.96),rgba(19,38,92,.88))}
+.landscape-overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,rgba(12,28,71,.8),rgba(19,38,92,.68))}
 .landscape-content{padding-block:48px}
 .landscape-content .eyebrow{color:#c8dcff}
 .landscape-content h2{color:white;font-size:clamp(2rem,4vw,2.8rem);margin-block:14px 20px}
