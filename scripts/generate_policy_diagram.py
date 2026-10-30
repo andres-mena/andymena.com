@@ -63,7 +63,7 @@ def decide():
                 s+=f'<circle cx="{x+17}" cy="{y-11}" r="9" fill="#d7e5fa"/><path d="M{x+13} {y-11}l3 3 5-6" fill="none" stroke="#233393" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>'
     return s
 
-stages=[('population','Business Problem','Among many possible actions, which is best for my business?',population()),('experiment','Run an experiment','',experiment()),('learn','Learn how customers contribute to the business goal','',learn()),('decide','Make scientifically informed decisions','',decide())]
+stages=[('population','Business Problem','Among many possible actions, which is best for my business?',population()),('experiment','Run an experiment','',experiment()),('learn','Learn how customers contribute to the business goal','',learn()),('decide','Make decisions informed by science','',decide())]
 for name,title,description,art in stages:
     svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 210" role="img" aria-labelledby="title desc"><title id="title">{title}</title><desc id="desc">{description}</desc>{art}</svg>\n'
     (ASSETS/f'policy-{name}.svg').write_text(svg)
