@@ -63,12 +63,12 @@ def decide():
                 s+=f'<circle cx="{x+17}" cy="{y-11}" r="9" fill="#d7e5fa"/><path d="M{x+13} {y-11}l3 3 5-6" fill="none" stroke="#233393" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>'
     return s
 
-stages=[('population','Business Problem','Among many possible actions, which is best for my business?',population()),('experiment','Run an experiment','',experiment()),('learn','Learn how customers contribute to the business goal','',learn()),('decide','Make decisions informed by science','',decide())]
+stages=[('population','Business Problem','Among many possible actions, which is best for my business?',population()),('experiment','Run an experiment','',experiment()),('learn','Learn which actions best contribute to the business goal','',learn()),('decide','Make decisions informed by science','',decide())]
 for name,title,description,art in stages:
     svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 210" role="img" aria-labelledby="title desc"><title id="title">{title}</title><desc id="desc">{description}</desc>{art}</svg>\n'
     (ASSETS/f'policy-{name}.svg').write_text(svg)
 
-full='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 450" role="img" aria-labelledby="title desc"><title id="title">Causal Inference for Business Decisions</title><desc id="desc">Business problem, experiment, learning how customers contribute to the business goal, and informed decisions. Conceptual illustration.</desc><rect width="1280" height="450" rx="12" fill="#122654"/>'
+full='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 450" role="img" aria-labelledby="title desc"><title id="title">Causal Inference for Business Decisions</title><desc id="desc">Business problem, experiment, learning which actions best contribute to the business goal, and decisions informed by science. Conceptual illustration.</desc><rect width="1280" height="450" rx="12" fill="#122654"/>'
 full+=text(640,60,'Causal Inference for Business Decisions','#ffffff',36)
 for i,(_,title,description,art) in enumerate(stages):
     x=24+i*312
