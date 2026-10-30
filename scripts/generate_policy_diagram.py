@@ -2,6 +2,7 @@
 from pathlib import Path
 import random
 from html import escape
+from textwrap import wrap
 
 ASSETS = Path(__file__).resolve().parents[1] / 'site' / 'assets'
 BLUE = '#80b7ff'
@@ -48,7 +49,6 @@ def learn():
         else:
             s+=f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.7" fill="{color}" opacity=".7"/>'
     s+='<path d="M56 178L204 35" stroke="#aaccff" stroke-width="2" stroke-dasharray="5 5"/>'
-    s+=text(80,202,'Different responses',LIGHT,11)+text(192,202,'Learn a rule',BLUE,11)
     return s
 
 def decide():
@@ -63,18 +63,19 @@ def decide():
                 s+=f'<circle cx="{x+17}" cy="{y-11}" r="9" fill="#d7e5fa"/><path d="M{x+13} {y-11}l3 3 5-6" fill="none" stroke="#233393" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>'
     return s
 
-stages=[('population','Start with people','Different people. Unknown effects.',population()),('experiment','Run an experiment','Compare treatment and control.',experiment()),('learn','Learn who benefits','Find patterns in treatment effects.',learn()),('decide','Make a decision','Choose whom to treat.',decide())]
+stages=[('population','Business Problem','Among many possible actions, which is best for my business?',population()),('experiment','Run an experiment','',experiment()),('learn','Learn how customers contribute to the business goal','',learn()),('decide','Make informed decisions','',decide())]
 for name,title,description,art in stages:
     svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 210" role="img" aria-labelledby="title desc"><title id="title">{title}</title><desc id="desc">{description}</desc>{art}</svg>\n'
     (ASSETS/f'policy-{name}.svg').write_text(svg)
 
-full='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" role="img" aria-labelledby="title desc"><title id="title">From Experiments to Targeted Business Decisions</title><desc id="desc">Policy learning: start with people, run an experiment, learn who benefits, and choose whom to treat. Conceptual illustration.</desc><rect width="1280" height="430" rx="12" fill="#122654"/>'
-full+=text(640,42,'FROM CAUSAL INFERENCE TO POLICY LEARNING',LIGHT,13)
-full+=text(640,80,'From Experiments to Targeted Business Decisions','#ffffff',28)
+full='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 450" role="img" aria-labelledby="title desc"><title id="title">Causal Inference for Business Decisions</title><desc id="desc">Business problem, experiment, learning how customers contribute to the business goal, and informed decisions. Conceptual illustration.</desc><rect width="1280" height="450" rx="12" fill="#122654"/>'
+full+=text(640,60,'Causal Inference for Business Decisions','#ffffff',36)
 for i,(_,title,description,art) in enumerate(stages):
     x=24+i*312
-    full+=f'<g transform="translate({x} 105)"><rect width="296" height="278" rx="6" fill="#ffffff" fill-opacity=".035" stroke="#d7e5fa" stroke-opacity=".2"/><g transform="translate(18 6)">{art}</g>{text(148,238,title,"#ffffff",17)}{text(148,260,description,LIGHT,12)}</g>'
+    labels=''.join(text(148,238+j*21,line,"#ffffff",17) for j,line in enumerate(wrap(title,28)))
+    labels+=''.join(text(148,270+j*17,line,LIGHT,12) for j,line in enumerate(wrap(description,40)))
+    full+=f'<g transform="translate({x} 90)"><rect width="296" height="335" rx="6" fill="#ffffff" fill-opacity=".035" stroke="#d7e5fa" stroke-opacity=".2"/><g transform="translate(18 6)">{art}</g>{labels}</g>'
     if i<3: full+=text(x+304,243,'→',LIGHT,20)
-full+=text(640,412,'A policy balances estimated benefits, costs, and constraints.',LIGHT,12)+'</svg>\n'
+full+='</svg>\n'
 (ASSETS/'policy-learning.svg').write_text(full)
 print('Generated four responsive panels and standalone diagram.')
