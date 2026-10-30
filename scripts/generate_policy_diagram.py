@@ -68,9 +68,9 @@ for name,title,description,art in stages:
     svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 210" role="img" aria-labelledby="title desc"><title id="title">{title}</title><desc id="desc">{description}</desc>{art}</svg>\n'
     (ASSETS/f'policy-{name}.svg').write_text(svg)
 
-full='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" role="img" aria-labelledby="title desc"><title id="title">Who should be treated?</title><desc id="desc">Policy learning: start with people, run an experiment, learn who benefits, and choose whom to treat. Conceptual illustration.</desc><rect width="1280" height="430" rx="12" fill="#122654"/>'
+full='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" role="img" aria-labelledby="title desc"><title id="title">From Experiments to Targeted Business Decisions</title><desc id="desc">Policy learning: start with people, run an experiment, learn who benefits, and choose whom to treat. Conceptual illustration.</desc><rect width="1280" height="430" rx="12" fill="#122654"/>'
 full+=text(640,42,'FROM CAUSAL INFERENCE TO POLICY LEARNING',LIGHT,13)
-full+=text(640,80,'Who should be treated?','#ffffff',28)
+full+=text(640,80,'From Experiments to Targeted Business Decisions','#ffffff',28)
 for i,(_,title,description,art) in enumerate(stages):
     x=24+i*312
     full+=f'<g transform="translate({x} 105)"><rect width="296" height="278" rx="6" fill="#ffffff" fill-opacity=".035" stroke="#d7e5fa" stroke-opacity=".2"/><g transform="translate(18 6)">{art}</g>{text(148,238,title,"#ffffff",17)}{text(148,260,description,LIGHT,12)}</g>'
