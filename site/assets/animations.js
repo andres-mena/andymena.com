@@ -29,8 +29,8 @@
 
   function reveal(elements, delay = 0) {
     return play(elements, { opacity: [0, 1], transform: ["translateY(14px)", "translateY(0px)"] }, {
-      duration: 0.5,
-      ease: [0.22, 1, 0.36, 1],
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1],
       delay,
     });
   }
@@ -56,7 +56,7 @@
 
     const groups = [
       [".profile-links", "a", 0.04],
-      [".policy-steps", "li", 0.09],
+      [".policy-steps", "li", 0.18],
       [".paper-list", "li", 0.05],
     ];
     for (const [selector, children, interval] of groups) {
