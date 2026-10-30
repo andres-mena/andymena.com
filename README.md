@@ -11,8 +11,8 @@ Only `site/` is intended for deployment. The purchase confirmation email, source
 ## Structure
 
 - `site/index.html`: biography, research, teaching, software, media.
-- `site/cv.html`: public, printable CV.
-- `site/assets/Andres_Mena_CV.pdf`: public CV generated from the HTML document.
+- `site/cv.html`: redirect for the previous CV page address.
+- `site/assets/Andres_Mena_CV.pdf`: original PDF supplied by the owner (`CV_Mena_2027.pdf`); opened directly by the CV navigation link.
 - `site/assets/style.css`: layout and palette.
 - `site/assets/portrait.jpg`: optimized portrait.
 - `site/assets/data-landscape.jpg`: supplied landscape photograph.
