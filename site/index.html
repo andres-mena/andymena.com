@@ -47,20 +47,21 @@
         <figcaption><span class="location-dot" aria-hidden="true"></span>Seattle, Washington</figcaption>
       </figure>
     </section>
-    <section class="landscape-band" aria-label="Research interests">
+    <section class="landscape-band" aria-labelledby="policy-title">
       <div class="landscape-overlay"></div>
       <div class="container landscape-content">
-        <p class="eyebrow">The questions behind the data</p>
-        <h2>Measure effects.<br>Understand mechanisms.<br>Inform decisions.</h2>
-        <p>Causal machine learning · Experimental design<br>Policy learning · Econometric methods</p>
+        <div class="policy-heading">
+          <div><p class="eyebrow">From causal inference to policy learning</p><h2 id="policy-title">Who should be treated?</h2></div>
+          <p>An experiment tells us what works.<br>Policy learning helps us decide for whom.</p>
+        </div>
+        <ol class="policy-steps">
+          <li><span class="policy-number">01</span><img src="assets/policy-population.svg" width="260" height="210" alt=""><h3>Start with people</h3><p>Different people. Unknown effects.</p></li>
+          <li><span class="policy-number">02</span><img src="assets/policy-experiment.svg" width="260" height="210" alt=""><h3>Run an experiment</h3><p>Compare treatment and control.</p></li>
+          <li><span class="policy-number">03</span><img src="assets/policy-learn.svg" width="260" height="210" alt=""><h3>Learn who benefits</h3><p>Find patterns in treatment effects.</p></li>
+          <li><span class="policy-number">04</span><img src="assets/policy-decide.svg" width="260" height="210" alt=""><h3>Make a decision</h3><p>Choose whom to treat.</p></li>
+        </ol>
+        <p class="policy-note">A policy balances estimated benefits, costs, and constraints.</p>
       </div>
-      <svg class="evidence-lines" viewBox="0 0 600 260" fill="none" aria-hidden="true">
-        <path d="M20 220H580M60 240V20" stroke="white" stroke-opacity=".3"/>
-        <path d="M60 180L130 167L200 151L270 144L340 119L410 86L480 58L550 35L550 83L480 103L410 130L340 151L270 174L200 185L130 199L60 208Z" fill="white" fill-opacity=".12"/>
-        <path d="M60 194L130 183L200 168L270 159L340 135L410 108L480 81L550 59" stroke="#b5d9ff" stroke-width="3"/>
-        <path d="M60 194L130 182L200 169L270 158L340 157L410 155L480 153L550 154" stroke="white" stroke-width="2" stroke-dasharray="7 8"/>
-        <path d="M270 30V220" stroke="white" stroke-opacity=".5" stroke-dasharray="4 6"/>
-      </svg>
     </section>
     <section id="research" class="section container" aria-labelledby="research-title">
       <div class="section-heading"><p class="eyebrow">01 / Research</p><h2 id="research-title">Econometric methods.<br>Applied questions.</h2></div>

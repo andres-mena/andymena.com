@@ -23,7 +23,7 @@ Only `site/` is intended for deployment. The purchase confirmation email, source
 
 ## Design
 
-The primary blue is `#233393`, with `#3043b4` as a secondary blue; both appear in LAPDE's homepage styles. The supplied landscape is combined with a decorative illustration of an observed and counterfactual trajectory. The illustration represents no empirical result.
+The primary blue is `#233393`, with `#3043b4` as a secondary blue; both appear in LAPDE's homepage styles. The supplied landscape backs a four-stage vector illustration: population with unknown effects, treatment and control, heterogeneous effects, and targeting decisions. The illustration represents no empirical result. `site/assets/policy-learning.svg` is a standalone version of the diagram.
 
 ## Publication
 
